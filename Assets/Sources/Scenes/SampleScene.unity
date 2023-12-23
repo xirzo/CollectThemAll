@@ -343,7 +343,7 @@ Transform:
   m_GameObject: {fileID: 1616340885}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 7, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -366,6 +366,7 @@ MonoBehaviour:
   _camera: {fileID: 519420031}
   _firstSpawnDelay: 0.1
   _spawnRepeatTimeInSeconds: 0.5
+  _ySpawnOffset: 0.5
 --- !u!1 &1686753246
 GameObject:
   m_ObjectHideFlags: 0

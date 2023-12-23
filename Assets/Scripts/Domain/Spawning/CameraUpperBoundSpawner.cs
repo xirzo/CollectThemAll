@@ -13,11 +13,13 @@ namespace Collect.Domain.Spawning
         [Space]
         [SerializeField, Min(0)] private float _firstSpawnDelay = 0.1f;
         [SerializeField, Min(0)] private float _spawnRepeatTimeInSeconds = 0.5f;
+        [SerializeField, Min(0)] private float _ySpawnOffset = 0.5f;
         private ObjectPool<MonoBehaviour> _pool;
         private List<MonoBehaviour> _objects;
         private Vector3 _randomPointInCameraBounds;
         private float _leftXCameraBound;
         private float _rightXCameraBound;
+        private float _upperYCameraBound;
         private float _lowerYCameraBound;
         private float _rightXScaledCameraBound;
         private float _leftXScaledCameraBound;
@@ -27,8 +29,8 @@ namespace Collect.Domain.Spawning
         {
             _leftXCameraBound = _camera.ViewportToWorldPoint(new Vector3(0, 0)).x;
             _rightXCameraBound = _camera.ViewportToWorldPoint(new Vector3(1, 0)).x;
+            _upperYCameraBound = _camera.ViewportToWorldPoint(new Vector3(0, 1)).y;
             _lowerYCameraBound = _camera.ViewportToWorldPoint(new Vector3(0, 0)).y;
-
         }
         private void GetCameraScaledBounds()
         {
@@ -51,7 +53,7 @@ namespace Collect.Domain.Spawning
         private void GetRandomPointInCameraBounds()
         {
             float randomX = Random.Range(_leftXScaledCameraBound, _rightXScaledCameraBound);
-            _randomPointInCameraBounds = new Vector3(randomX, transform.position.y);
+            _randomPointInCameraBounds = new Vector3(randomX, _upperYCameraBound + _ySpawnOffset);
         }
 
         private void SpawnAtRandomPointInCameraBounds()
