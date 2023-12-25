@@ -12,6 +12,9 @@ GameObject:
   - component: {fileID: 2821834787695802067}
   - component: {fileID: 5264553367985482161}
   - component: {fileID: 3074233026147234018}
+  - component: {fileID: 8817615087249038281}
+  - component: {fileID: 7433325905190916046}
+  - component: {fileID: 3421974543832408816}
   - component: {fileID: 6468712642519472677}
   m_Layer: 0
   m_Name: Player
@@ -74,6 +77,42 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _camera: {fileID: 0}
+--- !u!114 &8817615087249038281
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3895966374684739368}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 558dc0d39c4f41849aeed4d0db41ae96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &7433325905190916046
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3895966374684739368}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98d12c39b10377846b53c44742e15e1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3421974543832408816
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3895966374684739368}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40a3cdd96f8b18449b420132503a6e45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!50 &6468712642519472677
 Rigidbody2D:
   serializedVersion: 4
@@ -100,7 +139,7 @@ Rigidbody2D:
   m_Interpolate: 1
   m_SleepingMode: 1
   m_CollisionDetection: 1
-  m_Constraints: 4
+  m_Constraints: 6
 --- !u!1 &4349645332042914053
 GameObject:
   m_ObjectHideFlags: 0
@@ -208,7 +247,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.5529412, g: 0.5019608, b: 0.4745098, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
