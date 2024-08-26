@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using Collect.Domain.Entities;
 using Collect.Domain.Pooling;
+using Collect.Domain.Score;
 using UnityEngine;
 
 namespace Collect.Domain.Spawning
@@ -9,6 +10,7 @@ namespace Collect.Domain.Spawning
 	{
 		[SerializeField] private Entity _objectToSpawnPrefab;
 		[SerializeField] private Transform _enemiesParent;
+		[SerializeField] private CoinReceiver _coinReceiver;
 
 		[Space] [SerializeField] private Camera _camera;
 
@@ -34,6 +36,7 @@ namespace Collect.Domain.Spawning
 		{
 			_objects = new List<Entity>();
 			_pool = new ObjectPool<Entity>(_objectToSpawnPrefab, _enemiesParent);
+			_coinReceiver.Construct(_pool);
 
 			GetCameraBounds();
 			GetCameraScaledBounds();

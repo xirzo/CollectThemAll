@@ -508,6 +508,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98d12c39b10377846b53c44742e15e1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1260449084 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3421974543832408816, guid: 935f6e0cb7e738a47ac4e11716d756db, type: 3}
+  m_PrefabInstance: {fileID: 3178965978272056917}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40a3cdd96f8b18449b420132503a6e45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1616340885
 GameObject:
   m_ObjectHideFlags: 0
@@ -554,6 +565,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _objectToSpawnPrefab: {fileID: 9003985825305343863, guid: 67fe99a8c600c7f4f9dd419cc36835b3, type: 3}
   _enemiesParent: {fileID: 1686753247}
+  _coinReceiver: {fileID: 1260449084}
   _camera: {fileID: 519420031}
   _firstSpawnDelay: 0.1
   _spawnRepeatTimeInSeconds: 0.5
