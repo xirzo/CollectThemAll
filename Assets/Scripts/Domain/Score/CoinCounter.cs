@@ -4,7 +4,7 @@ namespace Collect.Domain.Score
 {
     [RequireComponent(typeof(ScoreCounter))]
     [RequireComponent(typeof(CoinReceiver))]
-    public class ScoreCoinCounter : MonoBehaviour
+    public class CoinCounter : MonoBehaviour
     {
         private ScoreCounter _counter;
         private CoinReceiver _receiver;
@@ -15,14 +15,8 @@ namespace Collect.Domain.Score
             TryGetComponent(out _receiver);
         }
 
-        private void Start()
-        {
-            _receiver.OnCoinReceived += () => _counter.Add();
-        }
+        private void Start() => _receiver.OnCoinReceived += () => _counter.Add();
 
-        private void OnDestroy()
-        {
-            _receiver.OnCoinReceived -= () => _counter.Add();
-        }
+        private void OnDestroy() => _receiver.OnCoinReceived -= () => _counter.Add();
     }
 }

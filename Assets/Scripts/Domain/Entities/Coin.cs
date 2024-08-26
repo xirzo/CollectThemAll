@@ -1,9 +1,6 @@
-using UnityEngine;
-
-namespace Collect.Entities.Coin
+namespace Collect.Domain.Entities
 {
-    public class Coin : MonoBehaviour
-    {
-
-    }
+	public class Coin : Entity
+	{
+	}
 }

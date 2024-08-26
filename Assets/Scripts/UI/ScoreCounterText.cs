@@ -1,4 +1,3 @@
-using System;
 using Collect.Domain.Score;
 using TMPro;
 using UnityEngine;

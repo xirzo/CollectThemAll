@@ -2,9 +2,10 @@ using UnityEngine;
 
 namespace Collect.Domain.Movement
 {
-    public class CameraMovementClamper : MonoBehaviour
+    public class PlayerMovementClamper : MonoBehaviour
     {
         [SerializeField] private Camera _camera;
+        
         private float _leftXCameraBound;
         private float _rightXCameraBound;
         private float _leftScaledXCameraBound;

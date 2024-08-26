@@ -6,7 +6,8 @@ namespace Collect.Domain.Score
     public class ScoreCounter : MonoBehaviour
     {
         public event Action<int> OnScoreIncreased;
-        public int Score { get; private set; }
+        
+        private int _score;
 
         public void Add(int value = 1)
         {
@@ -15,13 +16,13 @@ namespace Collect.Domain.Score
                 throw new ArgumentException("Value should be at least 1");
             }
 
-            Score += value;
-            OnScoreIncreased?.Invoke(Score);
+            _score += value;
+            OnScoreIncreased?.Invoke(_score);
         }
 
         public void Reset()
         {
-            Score = 0;
+            _score = 0;
         }
     }
 }
